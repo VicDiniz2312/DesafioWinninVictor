@@ -1,16 +1,7 @@
-variables:   
-  baseUrl: "https://go-sb.nimbi.net.br/tecfabricasb"
-
 stages:
   - test
 
-cache:
-  key: ${CI_COMMIT_REF_SLUG}
-  paths:
-    - node_modules/
-    - .npm/
-
-blogAgiVictor:
+test:
   image: cypress/browsers:node21.6.2-chrome85-ff81
   stage: test
   script:
@@ -19,11 +10,4 @@ blogAgiVictor:
     # start the server in the background
     - npm run start:ci &
     # run Cypress tests
-    - npx cypress run --browser chrome --spec cypress/e2e/buscaArtigoValido.cy.js
-    - npx cypress run --browser chrome --spec cypress/e2e/buscaPorArtigoInvalido.cy.js
-  artifacts:
-    when: always
-    paths:
-      - cypress/videos/**/*.mp4
-      - cypress/screenshots/**/*.png
-    expire_in: 1 day
+    - npm run headless
