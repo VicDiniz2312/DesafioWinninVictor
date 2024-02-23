@@ -10,7 +10,7 @@ cache:
     - node_modules/
     - .npm/
 
-Tests:
+BlogAgiVictor:
   image: cypress/browsers:node12.14.1-chrome85-ff81
   stage: test
   script:
@@ -19,7 +19,7 @@ Tests:
     # start the server in the background
     - npm run start:ci &
     # run Cypress tests
-    # npx cypress run --browser chrome --config baseUrl=https://ss01-ac.nimbi.net.br/Login.aspx?AutomatorToken=c0896d3e-2c59-41f3-af40-4b72eb804be0 --env environment=ac --spec cypress/e2e/compra/contratos/*.js
+    - npx cypress run --browser chrome --spec cypress/e2e/*.js
   artifacts:
     when: always
     paths:
