@@ -15,3 +15,4 @@ const locators = {
         CAMPO_DE_PESQUISA: '.widget > .search-form > label > #search-field'
 }
 export default locators;
+//

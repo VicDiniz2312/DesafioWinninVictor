@@ -8,7 +8,7 @@ describe('Busca artigo inválido', () => {
         cy.visit("https://blogdoagi.com.br/")
     })
 
-    it('Pesquisa um artigo não existente pelo ícone de lupa da tela principal', () => {
+    it('Pesquisa artigo não existente pelo ícone de lupa da tela principal', () => {
         //Garante que as imagens, menus e principais informações são corretamente carregados
         cy.get(loc.CARROSSEL_DE_SLIDES).should('be.visible')
         cy.get(loc.IMG_ULTIMASDOBLOG).should('be.visible')

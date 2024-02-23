@@ -2,7 +2,6 @@
 
 import loc from '../support/locators/locators'
 
-
 describe('Busca determinado artigo válido', () => {
     //Redirecionamento para tela home do blog
     beforeEach(() => {

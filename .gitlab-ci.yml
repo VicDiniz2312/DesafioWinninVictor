@@ -11,7 +11,7 @@ cache:
     - .npm/
 
 BlogAgiVictor:
-  image: cypress/browsers:node12.14.1-chrome85-ff81
+#  image: cypress/browsers:node12.14.1-chrome85-ff81
   stage: test
   script:
     # install dependencies
@@ -21,9 +21,9 @@ BlogAgiVictor:
     # run Cypress tests
     - npx cypress run --browser chrome --spec cypress/e2e/buscaArtigoValido.cy.js
     - npx cypress run --browser chrome --spec cypress/e2e/buscaPorArtigoInvalido.cy.js
-  artifacts:
-    when: always
-    paths:
-      - cypress/videos/**/*.mp4
-      - cypress/screenshots/**/*.png
-    expire_in: 1 day
+#  artifacts:
+#    when: always
+#    paths:
+#      - cypress/videos/**/*.mp4
+#      - cypress/screenshots/**/*.png
+#    expire_in: 1 day
