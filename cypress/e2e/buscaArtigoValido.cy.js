@@ -17,14 +17,24 @@ describe('Busca determinado artigo válido', () => {
         cy.get(loc.RODAPE).should('exist')
         //Realiza o clique no botão de lupa e a busca do artigo por palavras
         cy.get(loc.ICONE_DE_LUPA).click()
-        cy.get(loc.CAMPO_DE_BUSCA).type('Como fazer PIX?'+'{downarrow}{enter}', { delay: 150 })
-        //Verifica a existência de uma nova tela com os resultados da busca efetuada
+        cy.get(loc.CAMPO_DE_BUSCA).type('Demografia'+'{downarrow}{enter}', { delay: 150 })
+        //Verifica a existência de uma nova tela com o resultado da busca efetuada
         cy.get(loc.TEXTO_RESULTADO_BUSCA).should('exist')
-        //Valida os dados exibidos e relacionados a busca efetuada
-        cy.get(loc.ARTIGO1).should('be.visible')
-        cy.get(loc.SUB_TITULO3).should('contain', 'Qual a diferença entre Pix, TED e DOC?')
-        cy.get(loc.PAG1).should('contain', '1')
-        cy.get(loc.PROXIMO).should('exist')
+        //Valida os dados relacionados a busca efetuada
+        cy.get(loc.ARTIGO).should('be.visible')
+        cy.get(loc.SUB_TITULO).should('contain', 'Colunas')
+        cy.get(loc.PAG1).should('not.be.exist')
+        cy.get(loc.RODAPE).should('be.visible')
+        //Clica para visualizar o conteúdo do artigo
+        cy.intercept('GET', `https://blogdoagi.com.br/demografia-produtividade-e-o-desafio-do-crescimento-economico-no-brasil/?relatedposts=1`).as('relatedposts')
+        cy.get(loc.TITULO_ARTIGO).click()
+        cy.wait('@relatedposts')
+        //Verifica os dados relacionados ao conteúdo do artigo
+        cy.get(loc.IMG_DETALHE_ARTIGO).should('be.visible')
+        cy.get(loc.TEXTO_ARTIGO).should('be.visible')
+        //Movimenta a barra de rolagem lateral para exibir o rodapé da página
+        cy.scrollTo('bottom')
+        cy.get(loc.NAVEGACAO).should('be.visible')
     })
 
 })
