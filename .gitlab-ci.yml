@@ -2,12 +2,10 @@ stages:
   - test
 
 test:
-  image: cypress/browsers:node21.6.2-chrome85-ff81
+  image: cypress/browsers:node18.6.0-chrome105-ff104
   stage: test
   script:
     # install dependencies
     - npm ci
-    # start the server in the background
-    - npm run start:ci &
     # run Cypress tests
     - npm run headless
