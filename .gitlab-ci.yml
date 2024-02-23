@@ -1,5 +1,5 @@
 variables:   
-  baseUrl: ""
+  baseUrl: "https://go-sb.nimbi.net.br/tecfabricasb"
 
 stages:
   - test
@@ -19,7 +19,8 @@ BlogAgiVictor:
     # start the server in the background
     - npm run start:ci &
     # run Cypress tests
-    - npx cypress run --browser chrome --spec cypress/e2e/*.js
+    - npx cypress run --browser chrome --spec cypress/e2e/buscaArtigoValido.cy.js
+    - npx cypress run --browser chrome --spec cypress/e2e/buscaPorArtigoInvalido.cy.js
   artifacts:
     when: always
     paths:
