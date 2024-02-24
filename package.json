@@ -5,9 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "front_cypress": "cypress open",
-    "headless": "cypress run --spec cypress/e2e/*.js",
-    "cypress_exec": "cypress run --spec cypress/e2e/buscaArtigoValido.cy.js"
+    "headless": "cypress run --spec cypress/e2e/*.js"
   },
   "keywords": [],
   "author": "",
