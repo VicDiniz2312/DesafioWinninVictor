@@ -7,7 +7,7 @@ test:
   script:
     # install dependencies
     - npm ci
-    # run Cypress tests
+    # run cypress tests
     - npm run headless
   artifacts:
     when: always
