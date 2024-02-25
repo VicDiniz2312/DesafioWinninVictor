@@ -34,6 +34,7 @@ describe('Busca determinado artigo válido', () => {
         cy.get(loc.TEXTO_ARTIGO).should('be.visible')
         //Movimenta a barra de rolagem lateral para exibir o rodapé da página
         cy.scrollTo('bottom')
+        //Valida a exibição dos links de paginação
         cy.get(loc.NAVEGACAO).should('be.visible')
     })
 
