@@ -4,10 +4,10 @@ import loc from '../support/locators/locators'
 
 describe('Acesso a página da Wikipedia', () => {
     beforeEach(() => {
-        cy.visit("https://www.wikipedia.org/")
+        cy.visit("https://www.wikipedia.org/") 
     })
 
-    it('Pesquisa por Brasil e verifica o resultado', () => {
+    it('Pesquisa por Brasil verificando o resultado da busca', () => {
         //Garante a existência dos principais elementos nessa página principal
         //Título wikipedia
         cy.get(loc.LOGO_TOPO_WIKIPEDIA).should('be.visible')
