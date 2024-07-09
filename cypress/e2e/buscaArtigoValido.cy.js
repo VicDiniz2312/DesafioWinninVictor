@@ -5,7 +5,7 @@ import loc from '../support/locators/locators'
 describe('Busca determinado artigo válido', () => {
     //Redirecionamento para tela home do blog
     beforeEach(() => {
-        cy.visit("https://blogdoagi.com.br/")
+        cy.visit("https://blogdoagi.com.br/")//test
     })
 
     it('Pesquisa um artigo pelo ícone de lupa da tela principal', () => {
