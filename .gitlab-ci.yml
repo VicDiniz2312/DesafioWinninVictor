@@ -1,0 +1,17 @@
+stages:
+  - test
+
+test:
+  image: cypress/browsers:node18.6.0-chrome105-ff104
+  stage: test
+  script:
+    # install dependencies
+    - npm ci
+    # run cypress tests
+    - npm run headless
+  artifacts:
+    when: always
+    paths:
+      - cypress/videos/**/*.mp4
+      - cypress/screenshots/**/*.png
+    expire_in: 1 day
