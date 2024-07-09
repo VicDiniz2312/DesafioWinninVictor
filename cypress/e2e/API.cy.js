@@ -1,7 +1,7 @@
 /// <reference types="cypress" />
 
 describe('API Graphql do GraphqlZero', () => {
-    it('Teste para a query user', () => {
+    it('Teste para a query user | Graphql', () => {
 
         cy.request({
             method: 'POST',
