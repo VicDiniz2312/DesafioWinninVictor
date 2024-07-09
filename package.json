@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "headless": "cypress run --spec cypress/e2e/*.js",
+    "headless_": "cypress run --spec cypress/e2e/*.js",
     "cypress": "cypress open"
   },
   "keywords": [],

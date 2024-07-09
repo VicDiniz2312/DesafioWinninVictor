@@ -1,6 +1,6 @@
 ![cypress](https://github.com/VicDiniz2312/blogdoAgiVictor/assets/36644010/3d07cf70-8991-467b-89e2-3df0a0948d34)
 
-### Projeto BlogdoAgi de Automação de Testes
+### Desafio Winnin Victor
 
 Este projeto contém cenários de testes automatizados em JavaScript com Cypress
 
@@ -23,7 +23,7 @@ npm init –y
 Abrir o Git bash e navegar até a pasta do repositório local, executar este comando👇
 ```js  
 
-git clone https://github.com/VicDiniz2312/blogdoAgiVictor.git
+git clone https://github.com/VicDiniz2312/DesafioWinninVictor.git
 
 ```
 
@@ -49,17 +49,12 @@ Neste momento o "dashboard" do cypress é aberto. O usuário precisa escolher o 
 2. Em headless/cmd: Executando o comando abaixo no terminal
 ```js  
 
-npm run headless
+npm run headless_
 
 ```
 Este script já está configurado no arquivo _package.json_ do projeto
 
-## Integrando e Executando os testes no CI/CD do Gitlab:
-- Com uma conta logada no Gitlab vá até: New Project > Import Project > Repository by URL > Em Git repository URL adicionar o link "https://github.com/VicDiniz2312/blogdoAgiVictor.git" > Create Project
-- Clicar em Build > Pipelines > Run Pipeline > Selecionar a branch master > Run pipeline
-
-
-Pronto, os cenários serão executados no ambiente de CI/CD do Gitlab, pois o projeto possui o arquivo _.gitlab-ci.yml_ com as configurações necessárias para isso.
+## Integrando e Executando os testes no CI/CD do Github:
 
 
 
