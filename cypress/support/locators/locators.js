@@ -5,7 +5,7 @@ const locators = {
         INPUT_BUSCA: '#searchInput',
         LOGO_TOPO_WIKIPEDIA2: '.mw-logo',
         TXT_BRASIL: '.mw-page-title-main',
-        PAINEL: '.mw-content-ltr > :nth-child(4)',
+        //PAINEL: '.mw-content-ltr > :nth-child(4)',
         RODAPE: '#footer-info-copyright',
         
 }
