@@ -56,6 +56,9 @@ Este script já está configurado no arquivo _package.json_ do projeto
 
 ## Integrando e Executando os testes no CI/CD do Github:
 
+```
+No menu Actions do projeto, é possível visalizar e executar os cenários desenvolvidos. Execução implementada através do workflow_dispatch no Github Actions. Toda vez que é realizado um push no projeto o workflow é executado.
+
 
 
 
